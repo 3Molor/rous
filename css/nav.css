@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 66px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 666;
+    /* background-color: skyblue; */
+    transition: all linear 0.5s;
+}
+
+header>div {
+    height: 80px;
+    line-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* header 左边 logo */
+#logo {
+    display: flex;
+    align-items: center;
+    padding: 0.1rem 0.3rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#logo>a {
+    height: 100%;
+    width: 1.8rem;
+    display: block;
+    overflow: hidden;
+    margin-right: 0.23rem;
+}
+
+#logo img {
+    float: left;
+    width: 100%;
+}
+
+.logo_box {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.logo_box a {
+    color: #999;
+}
+
+/* header 左边 logo */
+
+/* header nav */
+nav>ul {
+    display: flex;
+    align-items: center;
+}
+
+
+nav>ul>li>a {
+    position: relative;
+    display: flex;
+    color: white;
+    font-size: 14px;
+    padding: 0 18px;
+}
+
+
+.text::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0px;
+    background-color: #004896;
+    height: 2px;
+    /* -webkit-transition: all 0.3s linear; */
+    transition: all 0.3s linear;
+    border-radius: 2px;
+}
+
+nav>ul>li:hover .text::after {
+    width: 100%;
+}
+
+/* header nav */
+
+/* header 右边 */
+#header_right {
+    font-size: 14px;
+    display: flex;
+}
+
+.header_right_box {
+    display: flex;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0 0.5rem;
+    position: relative;
+}
+
+.header_right_box>a {
+    display: flex;
+}
+
+.header_right_box>a>i {
+    color: white;
+    width: 16px;
+    margin-right: 8px;
+    margin-left: 10px;
+    /* display: flex; */
+}
+
+.header_right_box>a>span {
+    color: #999;
+
+}
+
+.header_right_box2 {
+    width: 1.06rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.header_right_box2 b {
+    color: #004896;
+}
+
+.header_right_show {
+    height: 0px;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+
+.header_right_show a {
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    color: black;
+    margin: 0 15px;
+    margin-top: 12px;
+}
+
+.header_right_box:hover .header_right_show {
+    height: 130px;
+}
+
+/* header 右边 */
+
+
+/* 关于大族隐藏部分 */
+.nav_show {
+    position: absolute;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    height: 0px;
+    width: 100%;
+    /* display: none; */
+    transition: all 0.3s linear;
+    overflow: hidden;
+}
+
+nav>ul>li:hover .nav_show {
+    height: 50px;
+}
+
+
+.nav_center {
+    display: flex;
+    justify-content: center;
+    width: 84%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.nav_center>ul {
+    display: flex;
+    line-height: 50px;
+    position: relative;
+}
+
+.nav_center>ul>li {
+    position: relative;
+    z-index: 102;
+}
+
+.nav_center ul a {
+    padding: 0 34px;
+    font-size: 14px;
+    display: block;
+    color: black;
+}
+
+.s {
+    color: white !important;
+}
+
+.on {
+    width: 124px;
+    height: 100%;
+    position: absolute;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    background-image: url('/images/img/xiebagheadd1.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/* 关于大族隐藏部分 */
+
+
+/* 产品中心 的隐藏部分 */
+.nav_box_show {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 0px;
+    /* height: 657px; */
+    background-color: white;
+    transition: all 0.3s linear;
+    overflow: hidden;
+}
+
+nav>ul>li:nth-child(2):hover .nav_box_show {
+    height: 657px;
+}
+
+.nav_show_box {
+    width: 84%;
+    height: 530px;
+    margin: 0 auto;
+    padding: 0.52rem 0 0.2rem;
+}
+
+.nav_box_show img {
+    height: 100%;
+}
+
+.nav_show_box>div {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_show_box1>div,
+.nav_show_box2>div,
+.nav_show_box3>div {
+    width: 24%;
+    height: 100%;
+    margin-left: 18px;
+}
+
+.imga {
+    position: relative;
+    height: 100%;
+    margin-right: 17px;
+}
+
+.imga_p {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 45px;
+    font-size: 23px;
+    color: white;
+    z-index: 99;
+}
+.imga::before{
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    border-right: 10px solid transparent;
+    border-left: 10px solid rgba(0,0,0,0.4);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+.imga::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+}
+
+.item_box>a {
+    font-size: 16px;
+    line-height: 2;
+    border-bottom: 1px solid #e8e8e8;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item_box>a>b {
+    margin-right: 10px;
+}
+
+.item_box_box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.item_box_box a {
+    font-size: 12px;
+    line-height: 2;
+    width: 50%;
+    color: #666666;
+    display: flex;
+    align-items: center;
+}
+
+.item_box_box a::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-right: 5px;
+    background-color: #666666;
+    border-radius: 50%;
+}
+
+.item_box_box a:hover {
+    color: #004896;
+}
+
+.item_box_box a:hover::before {
+    background-color: #004896;
+}
+
+.item_box>a:hover {
+    color: #004896;
+}
+
+.nav_show_box3 .item_box>a {
+    margin-top: 13px;
+}
+
+
+.nav_show_box4 {
+    width: 100%;
+    height: 80px;
+    background-color: pink;
+    background: url('/images/img/2_4.jpg');
+    background-size: cover;
+}
+
+.dibu {
+    position: absolute;
+    top: -80px;
+    z-index: 100;
+    transition: all 0.3s linear;
+}
+
+nav>ul>li:nth-child(2):hover .dibu {
+    top: 577px;
+}
+
+
+.nav_show_box4_box {
+    width: 84%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_show_box4_left {
+    margin-left: 50px;
+    display: flex;
+}
+
+.nav_show_box4_right {
+    margin-right: 50px;
+    font-size: 18px;
+    display: flex;
+}
+
+.nav_show_box4_left>p {
+    font-size: 14px;
+}
+
+.nav_show_box4_left>p>span {
+    font-size: 22px;
+}
+
+.zixun {
+    background-color: white;
+    color: #004896;
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 30px;
+    border-radius: 4px;
+}
+
+.zixun i {
+    color: #004896 !important;
+    font-weight: 900;
+    margin-right: 8px;
+}
+
+.zixun:hover {
+    background-color: red;
+    color: white;
+    transition: all 0.3s linear;
+}
+
+.zixun:hover .icon-dianhua {
+    color: white !important;
+    transition: all 0.3s linear;
+}
+
+.icon-chacha {
+    font-size: 28px !important;
+    color: white !important;
+    margin-left: 8px;
+    transition: all 0.3s linear;
+}
+
+.nav_show_box4_right:hover .icon-chacha {
+    transform: rotate(90deg);
+    transition: all 0.3s linear;
+}
+
+/* 产品中心 的隐藏部分 */
+
+/* 解决方案 的隐藏部分 */
+.sss {
+    height: 0px;
+    /* height: 657px; */
+    z-index: 101;
+}
+.solution {
+    width: 84%;
+    height: 530px;
+    margin: 0 auto;
+    padding: 0.52rem 0 0.2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.solution>div {
+    width: 24%;
+    background-color: red;
+    margin: 0 6px;
+    margin-bottom: 0.2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.solution_box1_img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.solution_box1_img img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.font {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 69%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: all 0.3s linear;
+}
+
+.font>div {
+    font-size: 14px;
+    line-height: 50px;
+    transition: all 0.3s linear;
+}
+
+.solution_box1>a:hover .font {
+    top: 0;
+    background: rgba(0, 54, 134, 0.8);
+}
+
+.solution_box1>a:hover .font>div {
+    line-height: 163px;
+}
+nav>ul>li:nth-child(3):hover .sss{
+    height: 657px;
+}
+nav>ul>li:nth-child(3):hover .dibu {
+    top: 577px;
+}
+/* 解决方案 的隐藏部分 */
